@@ -1,0 +1,122 @@
+======
+Day 4
+======
+4)
+Second Last digit of given number
+********************************************
+import java.io.*;
+import java.util.*;
+class UserMainCode
+{
+public int secondLastDigitOf(int input1)
+{
+int b=Math.abs(input1);
+if(b<10)
+return -1;
+int a=(input1)/10;
+return (Math.abs(a%10));
+}
+}
+
+
+
+
+============
+Day-6
+============
+
+Is Prime?
+*****************
+                int f=0;
+		for(int i=1;i<=input1;i++)
+		{
+			if(input1%i==0)
+				f++;
+		}
+		if(f==2)
+		return 2;
+		return 1;
+
+
+Factorial of a number
+****************************
+int i,p=1;
+		for(i=1;i<=input1;i++)
+		{
+			p=p*i;
+		}
+		return p;
+
+
+Nth Fibonacci
+********************
+int a=0;
+		int b=1;
+		int c=0;
+		int d=3;
+		while(d<=input1){
+			c=a+b;
+			a=b;
+			b=c;
+			d++;
+		}
+		return c;
+
+
+Nth prime
+******************
+int k=2;
+		int d=0,i,c=0;
+		int p=0;
+		while(d<=input1){
+			for(i=2;i<k/2;i++){
+				if(k%i==0){
+					c++;
+				}
+			}
+			if(c==0){
+				d++;
+				p=k;
+			}
+			k++;
+			c=0;
+		}
+		return p;
+
+
+============
+Day-7
+============
+
+Number of Primes in a specified range
+*******************************************
+int i,j;
+		int c=0,c1=0;
+		for(i=input1;i<=input2;i++)
+		{
+			for(j=1;j<=i;j++)
+			{
+				if(i%j==0)
+				c++;
+			}
+		
+		if(c==2){c1++;}
+		c=0;
+		}
+		return c1;
+
+
+All Digits Count
+**********************
+int c=0,d;
+		while(input1>9)
+		{
+			d=input1%10;
+			c++;
+			input1=input1/10;
+		}
+		return c+1;
+
+
+
+
